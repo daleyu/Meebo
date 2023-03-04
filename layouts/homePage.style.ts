@@ -2,11 +2,10 @@ import styled from "styled-components";
 import { Colors } from "../styles/tokens";
 
 export const InputButton = styled.div`
-  background-color: ${Colors.green};
   text-align: center;
-  border-radius: 5px;
   color: white;
   font-weight: 600;
+  text-decoration: None;
   padding: 5px;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
@@ -44,8 +43,6 @@ export const CenteringDiv = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  border: black;
-  border-width: 1px;
 `;
 
 export const CenteringSection = styled.div`
@@ -55,7 +52,6 @@ export const CenteringSection = styled.div`
   transform: translate(0, 20%);
   padding: 10px;
   justify-content: center;
-  background-color: ${Colors.green};
 `;
 
 export const WhiteSpace = styled.div`
@@ -67,4 +63,18 @@ export const HomeScreen = styled.div`
   width: 100%;
   height: 100vw;
   overflow-x: hidden;
+`;
+
+// export const StyledLink = styled(withRouter(Link))`
+//   color: white;
+//   text-decoration: none;
+// `;
+
+export const NextLabel = styled.p`
+  color: white;
+  text-decoration: none;
+  &:hover {
+    cursor: pointer;
+    color: grey;
+  }
 `;
