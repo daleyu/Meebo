@@ -3,6 +3,7 @@ import Image from "next/image";
 import { CenteringDiv, TextArea } from "../../../layouts/homePage.style";
 import {
   BootLegBody,
+  OptionText,
   PetContainer,
   PetNameBubble,
   QuestionText,
@@ -27,6 +28,7 @@ const PetPage = ({ data, pageName }) => {
         </PetNameBubble>
         <CenteringDiv>
           <TextArea type="text" />
+          <OptionText>⚙️</OptionText>
         </CenteringDiv>
       </BootLegBody>
     </div>
