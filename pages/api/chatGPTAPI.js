@@ -11,6 +11,8 @@ const sendMessageToChatGPT = async (message) => {
         prompt: `The following is a conversation with an AI assistant. The assistant is helpful, creative, clever, and very friendly.
       User: ${message}
       AI:`,
+        max_tokens: 50,
+        temperature: 0.7,
       }),
     }
   );
