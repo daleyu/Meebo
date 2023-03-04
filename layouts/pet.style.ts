@@ -30,4 +30,6 @@ export const PetRowContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   margin: 0 20px;
+  margin-top: 50px;
+  margin-bottom: 50px;
 `;

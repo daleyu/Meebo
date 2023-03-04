@@ -5,7 +5,7 @@ interface Props {
   main: ReactNode;
 }
 
-export function homeLayout({ sidebar, main }: Props) {
+export function homeLayout({ main }: Props) {
   return (
     <Container>
       <Main>

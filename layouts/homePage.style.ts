@@ -21,6 +21,7 @@ export const TextArea = styled.input`
   padding-top: 10px;
   padding-bottom: 10px;
   border: solid 2px #e5e5e5;
+  border-radius: 96px;
   outline: 1;
   font: normal 13px/100% Verdana, Tahoma, sans-serif;
   background: #ffffff url("bg_form.png") left top repeat-x;
@@ -54,9 +55,14 @@ export const CenteringSection = styled.div`
   transform: translate(0, 50%);
   padding: 10px;
   justify-content: center;
-  outline: 1px solid;
+  background-color: ${Colors.white};
 `;
 
 export const WhiteSpace = styled.div`
   padding: 40px;
+`;
+
+export const HomeScreen = styled.div`
+  background-color: ${Colors.primary};
+  color: ${Colors.primary};
 `;

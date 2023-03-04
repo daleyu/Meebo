@@ -16,7 +16,7 @@ const page = () => {
       <PetRowContainer>
         <PetContainer>
           {/* take image from public testDog */}
-          <a>
+          <a href="/pet/anything">
             <PetImage src="/images/testDog.png" />
           </a>
           <PetName>My Pet Name</PetName>
