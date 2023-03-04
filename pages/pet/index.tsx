@@ -17,21 +17,21 @@ const page = () => {
         <PetContainer>
           {/* take image from public testDog */}
           <a href="/pet/anything">
-            <PetImage src="/images/testDog.png" />
+            <PetImage src="/images/dog.png" />
           </a>
           <PetName>My Pet Name</PetName>
         </PetContainer>
         <PetContainer>
           {/* take image from public testDog */}
           <a>
-            <PetImage src="/images/testDog.png" />
+            <PetImage src="/images/dog.png" />
           </a>
           <PetName>My Pet Name</PetName>
         </PetContainer>
         <PetContainer>
           {/* take image from public testDog */}
           <a>
-            <PetImage src="/images/testDog.png" />
+            <PetImage src="/images/dog.png" />
           </a>
           <PetName>My Pet Name</PetName>
         </PetContainer>
@@ -40,21 +40,21 @@ const page = () => {
         <PetContainer>
           {/* take image from public testDog */}
           <a>
-            <PetImage src="/images/testDog.png" />
+            <PetImage src="/images/dog.png" />
           </a>
           <PetName>My Pet Name</PetName>
         </PetContainer>
         <PetContainer>
           {/* take image from public testDog */}
           <a>
-            <PetImage src="/images/testDog.png" />
+            <PetImage src="/images/dog.png" />
           </a>
           <PetName>My Pet Name</PetName>
         </PetContainer>
         <PetContainer>
           {/* take image from public testDog */}
           <a>
-            <PetImage src="/images/testDog.png" />
+            <PetImage src="/images/dog.png" />
           </a>
           <PetName>My Pet Name</PetName>
         </PetContainer>
