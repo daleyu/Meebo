@@ -1,12 +1,11 @@
 import { ReactNode } from "react";
-import { Container, Main, MainContent } from "./splitLayout.style";
+import { Container, Main, MainContent } from "./homeLayout.style";
 
 interface Props {
-  sidebar: ReactNode;
   main: ReactNode;
 }
 
-export function SplitLayout({ sidebar, main }: Props) {
+export function homeLayout({ main }: Props) {
   return (
     <Container>
       <Main>

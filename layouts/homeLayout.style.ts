@@ -16,6 +16,7 @@ export const Sidebar = styled.div`
 
 export const Main = styled.div`
   flex: 2;
+  background-color: ${Colors.white};
   position: relative;
 `;
 
