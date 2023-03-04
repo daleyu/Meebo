@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { Colors } from "../styles/tokens";
 
 export const InputButton = styled.div`
   text-align: center;
@@ -59,10 +58,11 @@ export const WhiteSpace = styled.div`
 `;
 
 export const HomeScreen = styled.div`
-  background-color: ${Colors.green}; //linear-gradient(106.07deg, #a9dcc5 8.55%, #60a888 93.3%);
+  background: linear-gradient(106.07deg, #a9dcc5 8.55%, #60a888 93.3%);
   width: 100%;
-  height: 100vw;
+  height: 100vh;
   overflow-x: hidden;
+  align-items: center;
 `;
 
 // export const StyledLink = styled(withRouter(Link))`
