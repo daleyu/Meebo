@@ -57,7 +57,7 @@ export const PetNameBubble = styled.div`
   margin-bottom: 20px;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   padding: 0 20px;
 `;
@@ -71,7 +71,7 @@ export const QuestionBox = styled.div`
   margin: 0 auto;
   margin-top: 20px;
   margin-bottom: 20px;
-  display: flex;
+  display: 
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
@@ -82,5 +82,11 @@ export const QuestionBox = styled.div`
 export const QuestionText = styled.p`
   text-align: center;
   font-size: 1.5rem;
+  margin: 0;
+`;
+
+//make option font larger
+export const OptionText = styled.p`
+  font-size: 3rem;
   margin: 0;
 `;
