@@ -1,0 +1,27 @@
+{
+  "animals_categories": [
+    {
+      "id": "dog",
+      "title": "Dog"
+    },
+    {
+      "id": "pig",
+      "title": "Pig"
+    },
+    {
+      "id": "cat",
+      "title": "Cat"
+    }
+  ],
+  "animal_id": [
+    {
+      "name": "dog"
+    },
+    {
+      "name": "pig"
+    },
+    {
+      "name": "cat"
+    }
+  ]
+}
