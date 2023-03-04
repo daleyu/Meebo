@@ -1,5 +1,3 @@
-const apiKey = "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";
-
 const sendMessageToChatGPT = async (message) => {
   const response = await fetch(
     "https://api.openai.com/v1/engines/davinci-codex/completions",
