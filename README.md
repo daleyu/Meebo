@@ -22,7 +22,7 @@
 
 ## 🥇 Accomplishments that we're proud of
 
-
+Andrej learned how to use terminal and command-line-interface. 
 
 ## 📚 What we learned
 
