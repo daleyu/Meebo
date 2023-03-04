@@ -20,6 +20,7 @@ const sendMessageToChatGPT = async (message: string): Promise<string> => {
   );
 
   const jsonResponse = await response.json();
+  console.log(jsonResponse);
   const { choices } = jsonResponse;
   if (!choices || choices.length === 0) {
     return "Sorry, I didn't understand that.";
