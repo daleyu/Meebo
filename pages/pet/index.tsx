@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { BootLegBody, PetContainer } from "../../layouts/pet.style";
 
 const page = () => {
@@ -6,11 +7,14 @@ const page = () => {
       <BootLegBody>
         <PetContainer>
           <div style={{ display: "flex", justifyContent: "center" }}>
-            <img
-              src="/images/doggyDooDoo.png"
-              alt="your image"
-              style={{ width: "100%" }}
-            />
+            <a href="pet/dog">
+              <Image
+                src="/images/doggyDooDoo.png"
+                alt="your image"
+                width={500}
+                height={400}
+              />
+            </a>
           </div>
         </PetContainer>
       </BootLegBody>
