@@ -23,3 +23,11 @@ export const PetName = styled.h1`
   margin: 0;
   margin-bottom: 10px;
 `;
+
+export const PetRowContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 20px;
+`;

@@ -6,7 +6,6 @@ import {
   CenteringSection,
   InputButton,
   TextArea,
-  WhiteSpace,
 } from "../layouts/homePage.style";
 import logo from "../public/images/logo.png";
 
@@ -42,15 +41,16 @@ export default function Home() {
               </CenteringDiv>
             </label>
           </div>
-          <WhiteSpace></WhiteSpace>
+          <div>
+            <label>
+              <InputButton>
+                <CenteringDiv>
+                  <a href="/pet">Next </a>
+                </CenteringDiv>
+              </InputButton>
+            </label>
+          </div>
         </form>
-        <div>
-          <label>
-            <InputButton>
-              <a href="/pet">Next </a>
-            </InputButton>
-          </label>
-        </div>
       </CenteringSection>
     </div>
   );
