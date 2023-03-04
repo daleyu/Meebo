@@ -1,0 +1,41 @@
+{
+  "name": "memcapsules",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "format": "prettier --write .",
+    "prisma-migrate": "prisma migrate dev",
+    "prisma-generate": "prisma generate"
+  },
+  "dependencies": {
+    "date-fns": "^2.29.3",
+    "mobx": "^6.6.2",
+    "mobx-react-lite": "^3.4.0",
+    "next": "12.3.1",
+    "next-absolute-url": "^1.2.2",
+    "normalize.css": "^8.0.1",
+    "prisma": "^4.4.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "styled-components": "^5.3.6",
+    "typewriter-effect": "^2.19.0"
+  },
+  "devDependencies": {
+    "@prisma/client": "^4.4.0",
+    "@types/node": "18.11.0",
+    "@types/react": "18.0.21",
+    "@types/react-dom": "18.0.6",
+    "@types/styled-components": "^5.1.26",
+    "babel-plugin-styled-components": "^2.0.7",
+    "eslint": "8.25.0",
+    "eslint-config-next": "12.3.1",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "prettier": "^2.7.1",
+    "typescript": "4.8.4"
+  }
+}
