@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/alt-text */
 import Head from "next/head";
 import Image from "next/image";
+import Link from "next/link";
 import {
   CenteringDiv,
   CenteringSection,
@@ -27,7 +28,7 @@ export default function Home() {
           <div>
             <label>
               <Image src={logo} layout="responsive" />
-              <InputButton>User Name:</InputButton>
+              <InputButton>Username:</InputButton>
               <CenteringDiv>
                 <TextArea type="text" />
               </CenteringDiv>
@@ -46,7 +47,7 @@ export default function Home() {
             <label>
               <InputButton>
                 <CenteringDiv>
-                  <a href="/pet">Next </a>
+                  <Link href="/pet">Next </Link>
                 </CenteringDiv>
               </InputButton>
             </label>
