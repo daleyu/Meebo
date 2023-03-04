@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/alt-text */
 import Image from "next/image";
+import ChatWindow from "../../../components/ChatWindow";
 import { CenteringDiv, TextArea } from "../../../layouts/homePage.style";
 import {
   BootLegBody,
@@ -29,6 +30,9 @@ const PetPage = ({ data, pageName }) => {
         <CenteringDiv>
           <TextArea type="text" />
           <OptionText>⚙️</OptionText>
+        </CenteringDiv>
+        <CenteringDiv>
+          <ChatWindow />
         </CenteringDiv>
       </BootLegBody>
     </div>
