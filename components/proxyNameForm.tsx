@@ -6,7 +6,7 @@ import {
   InputButton,
   TextArea,
   WhiteSpace,
-} from "../layouts/proxyName.style";
+} from "../layouts/homePage.style";
 import logo from "../public/images/logo.png";
 import { ProxyFormStore } from "../store/proxyFormStore";
 interface Props {

@@ -5,5 +5,5 @@ export enum Colors {
   darkText = "#333333",
 
   // colors
-  primary = "#FF4970",
+  primary = "#A2D8C0",
 }

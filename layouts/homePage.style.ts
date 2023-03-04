@@ -50,7 +50,7 @@ export const CenteringDiv = styled.div`
 export const CenteringSection = styled.div`
   display: flex;
   position: absolute;
-  margin-left: 13%;
+  margin-left: 25%;
   transform: translate(0, 50%);
   padding: 10px;
   justify-content: center;
