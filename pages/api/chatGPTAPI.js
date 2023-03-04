@@ -14,13 +14,16 @@ const sendMessageToChatGPT = async (message) => {
       User: ${message}
       AI:`,
         max_tokens: 50,
-        temperature: 0.7,
+        temperature: 0,
       }),
     }
   );
 
   const jsonResponse = await response.json();
   const { choices } = jsonResponse;
+  if (!choices || choices.length === 0) {
+    return "Sorry, I didn't understand that.";
+  }
   const [{ text }] = choices;
 
   return text;

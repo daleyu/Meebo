@@ -1,22 +1,33 @@
-// //CODE FROM CHAT-GPT FOr MEssaging only
-
 import { useState } from "react";
-import { sendMessageToChatGPT } from "./chatGPTAPI";
+import { sendMessageToChatGPT } from "../pages/api/chatGPTAPI";
 
 function ChatWindow() {
-  const [messages, setMessages] = useState([]);
-  const API_KEY = process.env.REACT_APP_CHATGPT_API_KEY;
+  const [messages, setMessages] = useState<
+    Array<{ message: string; sender: string }>
+  >([]);
+  const [inputValue, setInputValue] = useState("");
+  const API_KEY = process.env.api_key;
 
-  const handleMessageSend = async (message) => {
-    const response = await sendMessageToChatGPT(message, API_KEY);
+  const handleMessageSend = async (message: string) => {
+    const response = await sendMessageToChatGPT(message);
 
-    setMessages([
-      ...messages,
+    setMessages((prevMessages) => [
+      ...prevMessages,
       { message, sender: "user" },
       { message: response, sender: "chatbot" },
     ]);
   };
 
+  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setInputValue(event.target.value);
+  };
+
+  const handleKeyUp = (event: React.KeyboardEvent<HTMLInputElement>) => {
+    if (event.key === "Enter") {
+      handleMessageSend(inputValue);
+      setInputValue("");
+    }
+  };
   return (
     <div>
       <ul>
@@ -29,72 +40,12 @@ function ChatWindow() {
       <input
         type="text"
         placeholder="Type your message here"
-        onKeyUp={(e) => {
-          if (e.key === "Enter") handleMessageSend(e.target.value);
-        }}
+        value={inputValue}
+        onChange={handleInputChange}
+        onKeyUp={handleKeyUp}
       />
     </div>
   );
 }
 
 export default ChatWindow;
-
-// import { useState, useEffect } from "react";
-// import { sendMessageToChatGPT } from "./chatGPTAPI";
-
-// function ChatWindow() {
-//   const [messages, setMessages] = useState([]);
-//   const [isListening, setIsListening] = useState(false);
-//   const [transcript, setTranscript] = useState("");
-//   const API_KEY = process.env.REACT_APP_CHATGPT_API_KEY;
-
-//   useEffect(() => {
-//     if (isListening) {
-//       const recognition = new window.webkitSpeechRecognition();
-//       recognition.onresult = (event) => {
-//         const speechToText = event.results[0][0].transcript;
-//         setTranscript(speechToText);
-//       };
-//       recognition.start();
-//     }
-//   }, [isListening]);
-
-//   const handleInputChange = (event) => {
-//     setTranscript(event.target.value);
-//   };
-
-//   const handleMessageSend = async () => {
-//     const response = await sendMessageToChatGPT(transcript, API_KEY);
-//     setMessages([
-//       ...messages,
-//       { message: transcript, sender: "user" },
-//       { message: response, sender: "chatbot" },
-//     ]);
-//     setTranscript("");
-//   };
-
-//   return (
-//     <div>
-//       <div>
-//         {messages.map((messageObj, index) => (
-//           <div key={index} className={messageObj.sender}>
-//             {messageObj.message}
-//           </div>
-//         ))}
-//       </div>
-//       <div>
-//         <textarea
-//           placeholder="Hey Pal!"
-//           value={transcript}
-//           onChange={handleInputChange}
-//         />
-//         <button onClick={handleMessageSend}>Send</button>
-//         <button onClick={() => setIsListening(!isListening)}>
-//           Start/Stop listening
-//         </button>
-//       </div>
-//     </div>
-//   );
-// }
-
-// export default ChatWindow;
