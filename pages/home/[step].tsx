@@ -13,12 +13,12 @@ import { fetchApi } from "../../lib/fetchApi";
 import { ProxyFormStore } from "../../store/proxyFormStore";
 import { ComposerFrontendModel } from "../../types/frontendModels";
 
-type Step = "name" | "recipients";
+type Step = "home" | "pet";
 
 function getNextStep(step: unknown): Step | null {
   switch (step) {
-    case "name":
-      return "recipients";
+    case "home":
+      return "pet";
     default:
       return null;
   }
@@ -26,8 +26,8 @@ function getNextStep(step: unknown): Step | null {
 
 function getPrevStep(step: unknown): Step | null {
   switch (step) {
-    case "recipients":
-      return "name";
+    case "pet":
+      return "home";
     default:
       return null;
   }
@@ -53,10 +53,10 @@ const Proxy: NextPage = () => {
   let formElement: ReactNode;
 
   switch (step) {
-    case "name":
+    case "pet":
       formElement = <ProxyNameForm proxyFormStore={proxyFormStore} />;
       break;
-    case "recipients":
+    case "thing":
       formElement = <ProxyRecipientsForm proxyFormStore={proxyFormStore} />;
       break;
     default:
@@ -66,7 +66,7 @@ const Proxy: NextPage = () => {
   const nextStep = getNextStep(step);
   const prevStep = getPrevStep(step);
 
-  const canSubmit = step === "recipients";
+  const canSubmit = step === "pet";
 
   const main = (
     <>
@@ -75,7 +75,7 @@ const Proxy: NextPage = () => {
         <CenterDiv>
           <NextButton
             onClick={() => {
-              router.push(`/proxy/${nextStep}`);
+              router.push(`/home/${nextStep}`);
             }}
           >
             Next
@@ -86,7 +86,7 @@ const Proxy: NextPage = () => {
         <div>
           <PrevSubmitButton
             onClick={() => {
-              router.push(`/proxy/${prevStep}`);
+              router.push(`/home/${prevStep}`);
             }}
           >
             Previous

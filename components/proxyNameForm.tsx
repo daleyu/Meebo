@@ -41,7 +41,7 @@ export const ProxyNameForm = observer(function ProxyNameForm({
 
         <div>
           <label>
-            <InputButton>PassWord:</InputButton>
+            <InputButton>Password:</InputButton>
             <CenteringDiv>
               <TextArea
                 type="text"
