@@ -7,7 +7,7 @@ import {
   CenteringSection,
   HomeScreen,
   InputButton,
-  TextArea,
+  TextArea
 } from "../layouts/homePage.style";
 import logo from "../public/images/MeeboLogo.png";
 
@@ -28,7 +28,7 @@ export default function Home() {
           <div>
             <label>
               <Image src={logo} layout="responsive" />
-              <InputButton>Username:</InputButton>
+              {/* <InputButton>Username:</InputButton> */}
               <CenteringDiv>
                 <TextArea type="text" />
               </CenteringDiv>
@@ -37,8 +37,9 @@ export default function Home() {
 
           <div>
             <label>
-              <InputButton>Password:</InputButton>
+              {/* <InputButton>Password:</InputButton> */}
               <CenteringDiv>
+                <
                 <TextArea type="text" />
               </CenteringDiv>
             </label>
@@ -47,7 +48,7 @@ export default function Home() {
             <label>
               <InputButton>
                 <CenteringDiv>
-                  <Link href="/pet">Next </Link>
+                  <Link href="/pet"> Next </Link>
                 </CenteringDiv>
               </InputButton>
             </label>

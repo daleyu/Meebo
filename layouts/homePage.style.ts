@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { Colors } from "../styles/tokens";
 
 export const InputButton = styled.div`
-  background-color: ${Colors.primary};
+  background-color: ${Colors.green};
   text-align: center;
   border-radius: 5px;
   color: white;
@@ -52,10 +52,10 @@ export const CenteringSection = styled.div`
   display: flex;
   position: absolute;
   margin-left: 27%;
-  transform: translate(0, 50%);
+  transform: translate(0, 20%);
   padding: 10px;
   justify-content: center;
-  background-color: ${Colors.white};
+  background-color: ${Colors.green};
 `;
 
 export const WhiteSpace = styled.div`
@@ -63,6 +63,8 @@ export const WhiteSpace = styled.div`
 `;
 
 export const HomeScreen = styled.div`
-  background-color: ${Colors.primary};
-  color: ${Colors.primary};
+  background-color: ${Colors.green}; //linear-gradient(106.07deg, #a9dcc5 8.55%, #60a888 93.3%);
+  width: 100%;
+  height: 100vw;
+  overflow-x: hidden;
 `;
