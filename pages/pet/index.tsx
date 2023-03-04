@@ -6,7 +6,9 @@ const page = () => {
       <h1>My Pet</h1>
       <PetContainer>
         {/* take image from public testDog */}
-        <PetImage src="/images/testDog.png" />
+        <a>
+          <PetImage src="/images/testDog.png" />
+        </a>
         <PetName>My Pet Name</PetName>
       </PetContainer>
       <PetContainer>

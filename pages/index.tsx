@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 import Head from "next/head";
 import Image from "next/image";
 import {
@@ -53,4 +54,13 @@ export default function Home() {
       </CenteringSection>
     </div>
   );
+}
+
+export async function getServerSideProps() {
+  return {
+    props: {
+      // props for your component
+      pet: "pet",
+    },
+  };
 }
