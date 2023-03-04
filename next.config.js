@@ -7,16 +7,16 @@ const nextConfig = {
     return [
       {
         source: "/",
-        destination: "/proxy",
+        destination: "/home",
         permanent: false,
       },
       {
-        source: "/proxy",
-        destination: "/proxy/name",
+        source: "/home",
+        destination: "/home/pet",
         permanent: false,
       },
       {
-        source: "/compose/:composerId",
+        source: "/view/:",
         destination: "/compose/:composerId/0",
         permanent: false,
       },

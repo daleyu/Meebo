@@ -26,7 +26,7 @@ export const ProxyNameForm = observer(function ProxyNameForm({
         <div>
           <label>
             <Image src={logo} layout="responsive" />
-            <InputButton>Proxy Name:</InputButton>
+            <InputButton>User Name:</InputButton>
             <CenteringDiv>
               <TextArea
                 type="text"
@@ -41,7 +41,7 @@ export const ProxyNameForm = observer(function ProxyNameForm({
 
         <div>
           <label>
-            <InputButton>Composer Name:</InputButton>
+            <InputButton>PassWord:</InputButton>
             <CenteringDiv>
               <TextArea
                 type="text"

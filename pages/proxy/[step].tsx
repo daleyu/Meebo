@@ -7,9 +7,6 @@ import {
   CenterDiv,
   NextButton,
   PrevSubmitButton,
-  SideContainer,
-  SideText,
-  TextSideContainer,
 } from "../../layouts/proxy.style";
 import { SplitLayout } from "../../layouts/splitLayout";
 import { fetchApi } from "../../lib/fetchApi";
@@ -105,55 +102,6 @@ const Proxy: NextPage = () => {
   );
 
   let sidebar;
-
-  switch (step) {
-    case "name":
-      sidebar = (
-        <div>
-          <SideContainer>
-            <p style={{ fontSize: 100, margin: 0 }}></p>
-            <TextSideContainer>
-              <SideText>
-                <b>👋 Let's get started on creating your memory capsule!</b>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                🥰 Who will be composing the lovely message(s)?
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                🖼 What will your capsule look like?
-              </SideText>
-            </TextSideContainer>
-          </SideContainer>
-        </div>
-      );
-      break;
-    case "recipients":
-      sidebar = (
-        <div>
-          <SideContainer>
-            <p style={{ fontSize: 100, margin: 0 }}></p>
-            <TextSideContainer>
-              <SideText>
-                <b> 🙆 For whom would you like to capture this capsule? </b>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <b> 📅 When would you like them to receive your message(s)? </b>
-              </SideText>
-            </TextSideContainer>
-          </SideContainer>
-        </div>
-      );
-      break;
-  }
 
   return <SplitLayout sidebar={sidebar} main={main} />;
 };

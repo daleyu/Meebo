@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { Colors } from "../styles/tokens";
 
 export const Container = styled.div`
   width: 100vw;
@@ -9,13 +8,8 @@ export const Container = styled.div`
   align-items: stretch;
 `;
 
-export const Sidebar = styled.div`
-  flex: 1;
-  background-color: ${Colors.offWhite};
-`;
-
 export const Main = styled.div`
-  flex: 2;
+  flex: 1;
   position: relative;
 `;
 
