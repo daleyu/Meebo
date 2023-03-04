@@ -1,35 +1,33 @@
-import { InputButton } from "../../layouts/homePage.style";
-import {
-  PetContainer,
-  PetImage,
-  PetName,
-  PetRowContainer,
-} from "../../layouts/pet.style";
+import { BootLegBody, PetContainer } from "../../layouts/pet.style";
 
 const page = () => {
   return (
     <div>
-      <InputButton>
-        {" "}
-        <a href="../"> back </a>{" "}
-      </InputButton>
-      <PetRowContainer>
+      <BootLegBody>
         <PetContainer>
-          {/* take image from public testDog */}
+          <div style={{ display: "flex", justifyContent: "center" }}>
+            <img
+              src="/images/doggyDooDoo.png"
+              alt="your image"
+              style={{ width: "100%" }}
+            />
+          </div>
+        </PetContainer>
+      </BootLegBody>
+      {/* <PetRowContainer>
+        <PetContainer>
           <a href="/pet/anything">
             <PetImage src="/images/dog.png" />
           </a>
           <PetName>My Pet Name</PetName>
         </PetContainer>
         <PetContainer>
-          {/* take image from public testDog */}
           <a>
             <PetImage src="/images/dog.png" />
           </a>
           <PetName>My Pet Name</PetName>
         </PetContainer>
         <PetContainer>
-          {/* take image from public testDog */}
           <a>
             <PetImage src="/images/dog.png" />
           </a>
@@ -38,27 +36,23 @@ const page = () => {
       </PetRowContainer>
       <PetRowContainer>
         <PetContainer>
-          {/* take image from public testDog */}
+          <a>
+          </a>
+          <PetName>My Pet Name</PetName>
+        </PetContainer>
+        <PetContainer>
           <a>
             <PetImage src="/images/dog.png" />
           </a>
           <PetName>My Pet Name</PetName>
         </PetContainer>
         <PetContainer>
-          {/* take image from public testDog */}
           <a>
             <PetImage src="/images/dog.png" />
           </a>
           <PetName>My Pet Name</PetName>
         </PetContainer>
-        <PetContainer>
-          {/* take image from public testDog */}
-          <a>
-            <PetImage src="/images/dog.png" />
-          </a>
-          <PetName>My Pet Name</PetName>
-        </PetContainer>
-      </PetRowContainer>
+      </PetRowContainer> */}
     </div>
   );
 };

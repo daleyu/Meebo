@@ -2,12 +2,17 @@ import styled from "styled-components";
 
 //make a new styled component called PetContainer that wraps image in circle
 export const PetContainer = styled.div`
-  border-radius: 50%;
   overflow: hidden;
-  width: 200px;
-  height: 200px;
+  width: 30%;
   margin: 0 auto;
-  margin-top: 20px;
+  margin-top: 15vw;
+  margin-bottom: 20px;
+`;
+export const PetContainers = styled.div`
+  overflow: hidden;
+  width: 30%;
+  margin: 0 auto;
+  margin-top: 15vw;
   margin-bottom: 20px;
 `;
 //make a new styled component called PetImage that is the image of the pet
@@ -32,4 +37,11 @@ export const PetRowContainer = styled.div`
   margin: 0 20px;
   margin-top: 50px;
   margin-bottom: 50px;
+`;
+
+export const BootLegBody = styled.div`
+  background: linear-gradient(106.07deg, #a9dcc5 8.55%, #60a888 93.3%);
+  width: 100%;
+  height: 100vw;
+  overflow-x: hidden;
 `;
