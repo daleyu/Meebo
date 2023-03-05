@@ -1,12 +1,14 @@
 import { motion } from "framer-motion";
+import Image from "next/image";
 import * as React from "react";
 import {
   BootLegBody,
   Description,
   GearL,
   GearR,
-  PetContainer
+  PetContainer,
 } from "../../layouts/pet.style";
+
 let nameIndex = 0;
 const rotateGear = () => {
   nameIndex = nameIndex + (60 % 360);
@@ -90,45 +92,6 @@ const page = () => {
         </GearR>
         <Description>But I'll alright</Description>
       </BootLegBody>
-      {/* <PetRowContainer>
-        <PetContainer>
-          <a href="/pet/anything">
-            <PetImage src="/images/testDog.png" />
-          </a>
-          <PetName>My Pet Name</PetName>
-        </PetContainer>
-        <PetContainer>
-          <a>
-            <PetImage src="/images/testDog.png" />
-          </a>
-          <PetName>My Pet Name</PetName>
-        </PetContainer>
-        <PetContainer>
-          <a>
-            <PetImage src="/images/testDog.png" />
-          </a>
-          <PetName>My Pet Name</PetName>
-        </PetContainer>
-      </PetRowContainer>
-      <PetRowContainer>
-        <PetContainer>
-          <a>
-          </a>
-          <PetName>My Pet Name</PetName>
-        </PetContainer>
-        <PetContainer>
-          <a>
-            <PetImage src="/images/testDog.png" />
-          </a>
-          <PetName>My Pet Name</PetName>
-        </PetContainer>
-        <PetContainer>
-          <a>
-            <PetImage src="/images/testDog.png" />
-          </a>
-          <PetName>My Pet Name</PetName>
-        </PetContainer>
-      </PetRowContainer> */}
     </div>
   );
 };
