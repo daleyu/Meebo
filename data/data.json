@@ -2,31 +2,38 @@
   "animals_categories": [
     {
       "id": "dog",
-      "title": "Dog"
+      "title": "Dog",
+      "name": "Georgie"
     },
     {
       "id": "pig",
-      "title": "Pig"
+      "title": "Pig",
+      "name": "Clifford"
     },
     {
       "id": "cat",
-      "title": "Cat"
+      "title": "Cat",
+      "name": "Miau"
     },
     {
       "id": "bunny",
-      "title": "Bunny"
+      "title": "Bunny",
+      "name": "Jake Rabbit"
     },
     {
       "id": "bear",
-      "title": "Bear"
+      "title": "Bear",
+      "name": "Dale"
     },
     {
       "id": "penguin",
-      "title": "Penguin"
+      "title": "Penguin",
+      "name": "Patrick"
     },
     {
       "id": "chicken",
-      "title": "Chicken"
+      "title": "Chicken",
+      "name": "Andrej"
     }
   ],
   "animal_id": [

@@ -11,13 +11,13 @@ datasource db {
 }
 
 model User {
-  id  String @id
-  pet String
-  Pet Pet[]
+  user_id String @id
+  pet     String
+  Pet     Pet[]
 }
 
 model Pet {
   name    String @id
-  owner   User   @relation(fields: [userId], references: [id])
+  owner   User   @relation(fields: [user_id], references: [id])
   ownerID String
 }

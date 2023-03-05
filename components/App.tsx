@@ -1,17 +1,27 @@
 import { Configuration, OpenAIApi } from "openai";
 import { useState } from "react";
+import {
+  ChatBubble,
+  ChatButton,
+  InputButton,
+  QueryArea,
+} from "../layouts/homePage.style";
+import { BottomDiv, InputArea, ResponseText } from "../layouts/pet.style";
 
 export default function App() {
-  // const APIKEY = "";
+  //get apikey and save it as string
+  const APIKEY = process.env.OPENAI_API_KEY;
   const [ques, setQues] = useState("");
-  const [result, setResult] = useState("");
+  const [result, setResult] = useState(
+    "I can assist you with being more environmentally friendly. \n\nIf you want to learn about how to be more environmentally friendly with an item then push the tree button and type a product name. \n"
+  );
   const [loading, setLoading] = useState(false);
 
   // const configuration = new Configuration({
   //   apiKey: process.env.OPENAI_API_KEY
   // });
   const configuration = new Configuration({
-    apiKey: process.env.OPENAI_API_KEY,
+    apiKey: "", //put your api key here
   });
 
   const openai = new OpenAIApi(configuration);
@@ -33,21 +43,25 @@ export default function App() {
     setLoading(false);
   };
   return (
-    <div className="App">
-      <h3>Tickle me Elmo</h3>
-      <form onSubmit={handleSubmit}>
-        <textarea
-          value={ques}
-          onChange={(e) => setQues(e.target.value)}
-          rows={10}
-          cols={50}
-        ></textarea>
-        <br />
-        <button style={{ margin: "20px" }} type="submit">
-          Generate
-        </button>
-      </form>
-      <p>{result}</p>
-    </div>
+    <>
+      <ChatBubble>
+        <ResponseText>{result}</ResponseText>
+      </ChatBubble>
+      <BottomDiv classname="App">
+        <InputArea onSubmit={handleSubmit}>
+          <QueryArea
+            value={ques}
+            onChange={(e) => setQues(e.target.value)}
+            rows={1}
+            cols={50}
+          ></QueryArea>
+          <InputButton>
+            <ChatButton style={{ margin: "20px" }} type="submit">
+              Generate
+            </ChatButton>
+          </InputButton>
+        </InputArea>
+      </BottomDiv>
+    </>
   );
 }
