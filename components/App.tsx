@@ -21,7 +21,7 @@ export default function App() {
   //   apiKey: process.env.OPENAI_API_KEY
   // });
   const configuration = new Configuration({
-    apiKey: "", //put your api key here
+    apiKey: "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", //put your api key here
   });
 
   const openai = new OpenAIApi(configuration);

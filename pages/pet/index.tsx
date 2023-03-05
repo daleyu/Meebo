@@ -14,6 +14,8 @@ let nameIndex = 0;
 const rotateGear = () => {
   nameIndex = nameIndex + (60 % 360);
   currentOffsetY = offsetYBody[(nameIndex % 360) / 60];
+  currentImgPath = imgsrcsFull[(nameIndex % 360) / 60];
+  path = currentImgPath.slice(8, -4);
   console.log(currentOffsetY);
 };
 const descriptions = [
@@ -45,7 +47,7 @@ const imgsrcsHead = [
 
 const imgsrcsFull = [
   "/images/dog.png",
-  "/images/Penguin.png",
+  "/images/penguin.png",
   "/images/pig.png",
   "/images/bunny.png",
   "/images/chicken.png",
@@ -55,10 +57,13 @@ const imgsrcsFull = [
 const offsetYBody = ["0", "1", "6", "0", "2", "2"];
 
 var currentOffsetY = offsetYBody[(nameIndex % 360) / 60];
+var path = imgsrcsFull[(nameIndex % 360) / 60];
+var currentImgPath = imgsrcsFull[(nameIndex % 360) / 60];
 
-const page = () => {
+function page() {
   const [rotate, setRotate] = React.useState(false);
-
+  var imgSrc = imgsrcsFull[(nameIndex % 360) / 60];
+  var path = imgSrc.slice(8, -4);
   return (
     <div
       style={{
@@ -104,7 +109,8 @@ const page = () => {
               top: `${currentOffsetY}vw`,
             }}
           >
-            <a href="pet/dog">
+            <a href={"pet/" + path}>
+              console.log({path});
               <Image
                 src={imgsrcsFull[(nameIndex % 360) / 60]}
                 alt="your image"
@@ -160,5 +166,5 @@ const page = () => {
       </BootLegBody>
     </div>
   );
-};
+}
 export default page;
