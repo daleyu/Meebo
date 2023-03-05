@@ -49,8 +49,8 @@ const imgsrcsFull = [
   "/images/dog.png",
   "/images/penguin.png",
   "/images/pig.png",
-  "/images/bunny.png",
   "/images/chicken.png",
+  "/images/bunny.png",
   "/images/bear.png",
 ];
 
