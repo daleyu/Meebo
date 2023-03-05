@@ -1,8 +1,10 @@
 import { Configuration, OpenAIApi } from "openai";
 import { useState } from "react";
+import { CenteringDiv, TextArea } from "../layouts/homePage.style";
 
 export default function App() {
-  // const APIKEY = "";
+  //get apikey and save it as string
+  const APIKEY = process.env.OPENAI_API_KEY;
   const [ques, setQues] = useState("");
   const [result, setResult] = useState("");
   const [loading, setLoading] = useState(false);
@@ -11,7 +13,7 @@ export default function App() {
   //   apiKey: process.env.OPENAI_API_KEY
   // });
   const configuration = new Configuration({
-    apiKey: process.env.OPENAI_API_KEY,
+    apiKey: ,
   });
 
   const openai = new OpenAIApi(configuration);
@@ -33,21 +35,23 @@ export default function App() {
     setLoading(false);
   };
   return (
-    <div className="App">
-      <h3>Tickle me Elmo</h3>
-      <form onSubmit={handleSubmit}>
-        <textarea
-          value={ques}
-          onChange={(e) => setQues(e.target.value)}
-          rows={10}
-          cols={50}
-        ></textarea>
-        <br />
-        <button style={{ margin: "20px" }} type="submit">
-          Generate
-        </button>
-      </form>
+    <>
       <p>{result}</p>
-    </div>
+      <CenteringDiv classname="App">
+        <TextArea type="text" />
+        <form onSubmit={handleSubmit}>
+          <textarea
+            value={ques}
+            onChange={(e) => setQues(e.target.value)}
+            rows={10}
+            cols={50}
+          ></textarea>
+          <br />
+          <button style={{ margin: "20px" }} type="submit">
+            Generate
+          </button>
+        </form>
+      </CenteringDiv>
+    </>
   );
 }
