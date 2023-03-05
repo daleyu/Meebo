@@ -1,20 +1,27 @@
 import { Configuration, OpenAIApi } from "openai";
 import { useState } from "react";
-import { InputButton, QueryArea } from "../layouts/homePage.style";
-import { BottomDiv, InputArea } from "../layouts/pet.style";
+import {
+  ChatBubble,
+  ChatButton,
+  InputButton,
+  QueryArea,
+} from "../layouts/homePage.style";
+import { BottomDiv, InputArea, ResponseText } from "../layouts/pet.style";
 
 export default function App() {
   //get apikey and save it as string
   const APIKEY = process.env.OPENAI_API_KEY;
   const [ques, setQues] = useState("");
-  const [result, setResult] = useState("");
+  const [result, setResult] = useState(
+    "I can assist you with being more environmentally friendly. \n\nIf you want to learn about how to be more environmentally friendly with an item then push the tree button and type a product name. \n"
+  );
   const [loading, setLoading] = useState(false);
 
   // const configuration = new Configuration({
   //   apiKey: process.env.OPENAI_API_KEY
   // });
   const configuration = new Configuration({
-    apiKey:, //put your api key here
+    apiKey: "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", //put your api key here
   });
 
   const openai = new OpenAIApi(configuration);
@@ -37,7 +44,9 @@ export default function App() {
   };
   return (
     <>
-      <p>{result}</p>
+      <ChatBubble>
+        <ResponseText>{result}</ResponseText>
+      </ChatBubble>
       <BottomDiv classname="App">
         <InputArea onSubmit={handleSubmit}>
           <QueryArea
@@ -47,9 +56,9 @@ export default function App() {
             cols={50}
           ></QueryArea>
           <InputButton>
-            <button style={{ margin: "20px" }} type="submit">
+            <ChatButton style={{ margin: "20px" }} type="submit">
               Generate
-            </button>
+            </ChatButton>
           </InputButton>
         </InputArea>
       </BottomDiv>
