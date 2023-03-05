@@ -10,6 +10,9 @@ export const PetContainer = styled.div`
   margin: 0 auto;
   margin-top: 12vw;
   margin-bottom: 20px;
+  //make it in columns
+  display: flex;
+  flex-direction: column;
 `;
 export const PetContainers = styled.div`
   overflow: hidden;
@@ -110,4 +113,31 @@ export const QuestionText = styled.p`
 export const OptionText = styled.p`
   font-size: 3rem;
   margin: 0;
+`;
+
+//make items go left to right
+export const InputArea = styled.form`
+  text-align: center;
+`;
+
+export const BottomDiv = styled.div`
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  align-items: left;
+`;
+
+export const ResponseText = styled.p`
+  text-align: center;
+  //size text based on surrounding div
+  font-size: 1.5vw;
+  padding: 5px;
+`;
+
+export const IntroBubble = styled.div`
+  background: #ffffff;
+  position: absolute;
+  left: 4vw;
+  top: 14vw;
+  border-radius: 90px;
 `;
