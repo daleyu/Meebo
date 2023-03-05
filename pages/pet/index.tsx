@@ -5,7 +5,7 @@ import {
   Description,
   GearL,
   GearR,
-  PetContainer,
+  PetContainer
 } from "../../layouts/pet.style";
 let nameIndex = 0;
 const rotateGear = () => {
@@ -35,11 +35,14 @@ const page = () => {
       <BootLegBody>
         <PetContainer>
           <div style={{ display: "flex", justifyContent: "center" }}>
-            <img
-              src="/images/doggyDooDoo.png"
-              alt="your image"
-              style={{ width: "100%" }}
-            />
+            <a href="pet/dog">
+              <Image
+                src="/images/doggyDooDoo.png"
+                alt="your image"
+                width={500}
+                height={400}
+              />
+            </a>
           </div>
         </PetContainer>
 
@@ -87,6 +90,45 @@ const page = () => {
         </GearR>
         <Description>But I'll alright</Description>
       </BootLegBody>
+      {/* <PetRowContainer>
+        <PetContainer>
+          <a href="/pet/anything">
+            <PetImage src="/images/testDog.png" />
+          </a>
+          <PetName>My Pet Name</PetName>
+        </PetContainer>
+        <PetContainer>
+          <a>
+            <PetImage src="/images/testDog.png" />
+          </a>
+          <PetName>My Pet Name</PetName>
+        </PetContainer>
+        <PetContainer>
+          <a>
+            <PetImage src="/images/testDog.png" />
+          </a>
+          <PetName>My Pet Name</PetName>
+        </PetContainer>
+      </PetRowContainer>
+      <PetRowContainer>
+        <PetContainer>
+          <a>
+          </a>
+          <PetName>My Pet Name</PetName>
+        </PetContainer>
+        <PetContainer>
+          <a>
+            <PetImage src="/images/testDog.png" />
+          </a>
+          <PetName>My Pet Name</PetName>
+        </PetContainer>
+        <PetContainer>
+          <a>
+            <PetImage src="/images/testDog.png" />
+          </a>
+          <PetName>My Pet Name</PetName>
+        </PetContainer>
+      </PetRowContainer> */}
     </div>
   );
 };

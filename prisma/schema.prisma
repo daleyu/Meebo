@@ -10,30 +10,14 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Composer {
-  id         String      @id
-  name       String
-  proxyName  String? // if null, proxy is same as composer
-  recipients Recipient[]
+model User {
+  id  String @id
+  pet String
+  Pet Pet[]
 }
 
-model Recipient {
-  id         String     @id
-  name       String
-  email      String?
-  phone      String?
-  composer   Composer   @relation(fields: [composerId], references: [id])
-  composerId String
-  occasions  Occasion[]
-}
-
-model Occasion {
-  id          String    @id
-  label       String
-  date        DateTime
-  recipient   Recipient @relation(fields: [recipientId], references: [id])
-  recipientId String
-
-  message String?
-  // TODO add video
+model Pet {
+  name    String @id
+  owner   User   @relation(fields: [userId], references: [id])
+  ownerID String
 }

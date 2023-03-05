@@ -63,3 +63,48 @@ export const Description = styled.div`
   font-family: heebo;
   text-align: center;
 `;
+
+//create petname bubble
+export const PetNameBubble = styled.div`
+  background: #ffffff;
+  border-radius: 90px;
+  width: 10%;
+  height: 50px;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+`;
+
+// create text entry round box for asking questions
+export const QuestionBox = styled.div`
+  background: #ffffff;
+  border-radius: 90px;
+  width: 80%;
+  height: 50px;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: 
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+`;
+
+// center text in question box
+export const QuestionText = styled.p`
+  text-align: center;
+  font-size: 1.5rem;
+  margin: 0;
+`;
+
+//make option font larger
+export const OptionText = styled.p`
+  font-size: 3rem;
+  margin: 0;
+`;

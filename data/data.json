@@ -1,0 +1,55 @@
+{
+  "animals_categories": [
+    {
+      "id": "dog",
+      "title": "Dog"
+    },
+    {
+      "id": "pig",
+      "title": "Pig"
+    },
+    {
+      "id": "cat",
+      "title": "Cat"
+    },
+    {
+      "id": "bunny",
+      "title": "Bunny"
+    },
+    {
+      "id": "bear",
+      "title": "Bear"
+    },
+    {
+      "id": "penguin",
+      "title": "Penguin"
+    },
+    {
+      "id": "chicken",
+      "title": "Chicken"
+    }
+  ],
+  "animal_id": [
+    {
+      "name": "dog"
+    },
+    {
+      "name": "pig"
+    },
+    {
+      "name": "cat"
+    },
+    {
+      "name": "bunny"
+    },
+    {
+      "name": "bear"
+    },
+    {
+      "name": "penguin"
+    },
+    {
+      "name": "chicken"
+    }
+  ]
+}

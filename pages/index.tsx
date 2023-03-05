@@ -1,14 +1,17 @@
 /* eslint-disable jsx-a11y/alt-text */
 import Head from "next/head";
 import Image from "next/image";
+import Link from "next/Link";
+import { Form } from "react-bootstrap";
 import {
   CenteringDiv,
   CenteringSection,
   HomeScreen,
   InputButton,
-  TextArea,
+  NextLabel,
 } from "../layouts/homePage.style";
 import logo from "../public/images/MeeboLogo.png";
+import styles from "../styles/Home.module.css";
 
 export default function Home() {
   return (
@@ -27,18 +30,26 @@ export default function Home() {
           <div>
             <label>
               <Image src={logo} layout="responsive" />
-              <InputButton>User Name:</InputButton>
+              {/* <InputButton>Username:</InputButton> */}
               <CenteringDiv>
-                <TextArea type="text" />
+                <Form.Control
+                  name="Username"
+                  placeholder="Username"
+                  className={styles.inputForm}
+                />
               </CenteringDiv>
             </label>
           </div>
 
           <div>
             <label>
-              <InputButton>Password:</InputButton>
+              {/* <InputButton>Password:</InputButton> */}
               <CenteringDiv>
-                <TextArea type="text" />
+                <Form.Control
+                  name="Password"
+                  placeholder="Password"
+                  className={styles.inputForm}
+                />
               </CenteringDiv>
             </label>
           </div>
@@ -46,7 +57,9 @@ export default function Home() {
             <label>
               <InputButton>
                 <CenteringDiv>
-                  <a href="/pet">Next </a>
+                  <Link href="/pet">
+                    <NextLabel>Next</NextLabel>
+                  </Link>
                 </CenteringDiv>
               </InputButton>
             </label>
