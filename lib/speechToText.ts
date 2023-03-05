@@ -1,22 +1,22 @@
-import { SpeechRecognition } from "@google-cloud/speech";
+import SpeechRecognition from "@google-cloud/speech";
 import { useState } from "react";
 const TextToSpeech = ({
   onTextRecognized,
 }: {
   onTextRecognized: (text: string) => void;
 }) => {
-  const [recognition, setRecognition] = useState<SpeechRecognition | null>(
-    null
-  );
+  const [recognition, setRecognition] = useState<
+    typeof SpeechRecognition | null
+  >(null);
 
   // initialize the speech recognition API
   const initRecognition = () => {
-    const recognition = new window.webkitSpeechRecognition();
+    var recognition = new (window as any).webkitSpeechRecognition();
     recognition.continuous = true;
     recognition.interimResults = false;
     recognition.lang = "en-US";
 
-    recognition.onresult = (event) => {
+    recognition.onresult = (event: { results: string | any[] }) => {
       const text = event.results[event.results.length - 1][0].transcript;
       onTextRecognized(text);
     };
@@ -44,9 +44,13 @@ const TextToSpeech = ({
 
   return (
     <div>
-      <button>
+      <button
+        onclick={() => {
+          initRecognition, startListening;
+        }}
+      >
         {" "}
-        onclick={(initRecognition, startListening)} Start Listening
+        Start Listening
       </button>
       <button onclick={stopListening}>Stop listening</button>
     </div>
