@@ -1,4 +1,3 @@
-import { Spin } from "antd";
 import { Configuration, OpenAIApi } from "openai";
 import { useState } from "react";
 
@@ -12,7 +11,7 @@ export default function App() {
   //   apiKey: process.env.OPENAI_API_KEY
   // });
   const configuration = new Configuration({
-    apiKey: "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",
+    apiKey: process.env.OPENAI_API_KEY,
   });
 
   const openai = new OpenAIApi(configuration);
@@ -48,7 +47,7 @@ export default function App() {
           Generate
         </button>
       </form>
-      {loading ? <Spin /> : <p>{result}</p>}
+      <p>{result}</p>
     </div>
   );
 }
