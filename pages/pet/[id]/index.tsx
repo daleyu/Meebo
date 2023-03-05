@@ -17,7 +17,13 @@ const PetPage = ({ data, pageName }) => {
         <PetContainer>
           <div style={{ display: "flex", justifyContent: "center" }}>
             <Image
-              src={`/images/${pageName}.png`}
+              src={`/images/${pageName}_head.png`}
+              alt="your image"
+              width={500}
+              height={400}
+            />
+            <Image
+              src={`/images/${pageName}_body.png`}
               alt="your image"
               width={500}
               height={400}
