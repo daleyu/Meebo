@@ -1,15 +1,20 @@
 import { motion } from "framer-motion";
+import Head from "next/head";
+import Image from "next/image";
 import * as React from "react";
 import {
   BootLegBody,
   Description,
   GearL,
   GearR,
-  PetContainer
+  PetContainer,
 } from "../../layouts/pet.style";
+
 let nameIndex = 0;
 const rotateGear = () => {
   nameIndex = nameIndex + (60 % 360);
+  currentOffsetY = offsetYBody[(nameIndex % 360) / 60];
+  console.log(currentOffsetY);
 };
 const descriptions = [
   "Georgie the dog loves to recycle, he even barks at people who don't!",
@@ -19,6 +24,37 @@ const descriptions = [
   "Andrej the chicken is an egg-cellent conservationist, she turns off the lights as she leaves the coop!",
   "Del the bear is a real tree-hugger, he gives every trunk a big ol' bear hug to show his appreciation!",
 ];
+
+const imgsrcsBody = [
+  "/images/Dog_Body.png",
+  "/images/Penguin_Body.png",
+  "/images/pig_body.png",
+  "/images/bunny_body.png",
+  "/images/chicken_body.png",
+  "/images/bear_body.png",
+];
+
+const imgsrcsHead = [
+  "/images/Dog_Head.png",
+  "/images/Penguin_Head.png",
+  "/images/pig_head.png",
+  "/images/bunny_head.png",
+  "/images/chicken_head.png",
+  "/images/bear_head.png",
+];
+
+const imgsrcsFull = [
+  "/images/dog.png",
+  "/images/Penguin.png",
+  "/images/pig.png",
+  "/images/bunny.png",
+  "/images/chicken.png",
+  "/images/bear.png",
+];
+
+const offsetYBody = ["0", "1", "6", "0", "2", "2"];
+
+var currentOffsetY = offsetYBody[(nameIndex % 360) / 60];
 
 const page = () => {
   const [rotate, setRotate] = React.useState(false);
@@ -32,12 +68,45 @@ const page = () => {
         position: "fixed",
       }}
     >
+      <Head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin=""
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Heebo:wght@300&display=swap"
+          rel="stylesheet"
+        />
+      </Head>
+      <div
+        style={{
+          width: "30vw",
+          height: "7vw",
+          borderRadius: "50%",
+          position: "absolute",
+          zIndex: "0",
+          top: "27vw",
+          left: "50vw",
+          transform: "translateX(-50%)",
+          backgroundColor: "red",
+          background: "#649A82",
+        }}
+      ></div>
       <BootLegBody>
         <PetContainer>
-          <div style={{ display: "flex", justifyContent: "center" }}>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              position: "absolute",
+              top: `${currentOffsetY}vw`,
+            }}
+          >
             <a href="pet/dog">
               <Image
-                src="/images/doggyDooDoo.png"
+                src={imgsrcsFull[(nameIndex % 360) / 60]}
                 alt="your image"
                 width={500}
                 height={400}
@@ -45,7 +114,6 @@ const page = () => {
             </a>
           </div>
         </PetContainer>
-
         <GearL>
           <motion.div
             animate={{ rotate: nameIndex }}
@@ -88,47 +156,8 @@ const page = () => {
             </div>
           </motion.div>
         </GearR>
-        <Description>But I'll alright</Description>
+        <Description>{descriptions[(nameIndex % 360) / 60]}</Description>
       </BootLegBody>
-      {/* <PetRowContainer>
-        <PetContainer>
-          <a href="/pet/anything">
-            <PetImage src="/images/testDog.png" />
-          </a>
-          <PetName>My Pet Name</PetName>
-        </PetContainer>
-        <PetContainer>
-          <a>
-            <PetImage src="/images/testDog.png" />
-          </a>
-          <PetName>My Pet Name</PetName>
-        </PetContainer>
-        <PetContainer>
-          <a>
-            <PetImage src="/images/testDog.png" />
-          </a>
-          <PetName>My Pet Name</PetName>
-        </PetContainer>
-      </PetRowContainer>
-      <PetRowContainer>
-        <PetContainer>
-          <a>
-          </a>
-          <PetName>My Pet Name</PetName>
-        </PetContainer>
-        <PetContainer>
-          <a>
-            <PetImage src="/images/testDog.png" />
-          </a>
-          <PetName>My Pet Name</PetName>
-        </PetContainer>
-        <PetContainer>
-          <a>
-            <PetImage src="/images/testDog.png" />
-          </a>
-          <PetName>My Pet Name</PetName>
-        </PetContainer>
-      </PetRowContainer> */}
     </div>
   );
 };
