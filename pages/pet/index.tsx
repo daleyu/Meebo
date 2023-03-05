@@ -110,7 +110,6 @@ function page() {
             }}
           >
             <a href={"pet/" + path}>
-              console.log({path});
               <Image
                 src={imgsrcsFull[(nameIndex % 360) / 60]}
                 alt="your image"
