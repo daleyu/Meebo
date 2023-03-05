@@ -2,7 +2,11 @@
 
 ## 💡 Inspiration💡
 
+Global Warming, food waste, and pollution seem to be undeniable components of Human life now, but that is not the 
 
+COVID revolutionized the way we communicate and work by normalizing remoteness. **It also created a massive emotional drought -** we weren't made to empathize with each other through screens. As video conferencing turns into the new normal, marketers and managers continue to struggle with remote communication's lack of nuance and engagement, and those with sensory impairments likely have it even worse.
+
+Given our team's experience with AI/ML, we wanted to leverage data to bridge this gap. Beginning with the idea to use computer vision to help sensory impaired users detect emotion, we generalized our use-case to emotional analytics and real-time emotion identification for video conferencing in general.
 
 ## ⚙️ What it does ⚙️
 
