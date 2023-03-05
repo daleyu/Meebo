@@ -1,6 +1,7 @@
 import { Configuration, OpenAIApi } from "openai";
 import { useState } from "react";
-import { CenteringDiv, TextArea } from "../layouts/homePage.style";
+import { InputButton, QueryArea } from "../layouts/homePage.style";
+import { BottomDiv, InputArea } from "../layouts/pet.style";
 
 export default function App() {
   //get apikey and save it as string
@@ -13,7 +14,7 @@ export default function App() {
   //   apiKey: process.env.OPENAI_API_KEY
   // });
   const configuration = new Configuration({
-    apiKey: ,
+    apiKey:, //put your api key here
   });
 
   const openai = new OpenAIApi(configuration);
@@ -37,21 +38,21 @@ export default function App() {
   return (
     <>
       <p>{result}</p>
-      <CenteringDiv classname="App">
-        <TextArea type="text" />
-        <form onSubmit={handleSubmit}>
-          <textarea
+      <BottomDiv classname="App">
+        <InputArea onSubmit={handleSubmit}>
+          <QueryArea
             value={ques}
             onChange={(e) => setQues(e.target.value)}
-            rows={10}
+            rows={1}
             cols={50}
-          ></textarea>
-          <br />
-          <button style={{ margin: "20px" }} type="submit">
-            Generate
-          </button>
-        </form>
-      </CenteringDiv>
+          ></QueryArea>
+          <InputButton>
+            <button style={{ margin: "20px" }} type="submit">
+              Generate
+            </button>
+          </InputButton>
+        </InputArea>
+      </BottomDiv>
     </>
   );
 }

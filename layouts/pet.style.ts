@@ -108,3 +108,15 @@ export const OptionText = styled.p`
   font-size: 3rem;
   margin: 0;
 `;
+
+//make items go left to right
+export const InputArea = styled.form`
+  text-align: center;
+`;
+
+export const BottomDiv = styled.div`
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  align-items: left;
+`;

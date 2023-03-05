@@ -79,3 +79,30 @@ export const NextLabel = styled.p`
     color: grey;
   }
 `;
+export const QueryArea = styled.textarea`
+  text-align: center;
+  margin-top: 0.7vw;
+  margin-bottom: 0.7vw;
+  padding: 0.65vw;
+  border: black;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: solid 2px #e5e5e5;
+  border-radius: 96px;
+  outline: 1;
+  font: normal 13px/100% Verdana, Tahoma, sans-serif;
+  background: #ffffff url("bg_form.png") left top repeat-x;
+  width: 600px;
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left 25,
+    from(#ffffff),
+    color-stop(4%, #eeeeee),
+    to(#ffffff)
+  );
+  background: -moz-linear-gradient(top, #ffffff, #eeeeee 1px, #ffffff 25px);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 8px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 8px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 8px;
+`;
