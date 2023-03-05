@@ -2,43 +2,53 @@
 
 ## 💡 Inspiration💡
 
-Global Warming, food waste, and pollution seem to be undeniable components of Human life now, but that is not the 
+Global Warming, food waste, and pollution seem to be undeniable components of Human life now, but does not mean we can't change now. Environmental damage and carbon footprint on the **Individual level create massive repercussions against our environment--**so we have to start learning about how to act environmentally friendly at a young age. 
 
-COVID revolutionized the way we communicate and work by normalizing remoteness. **It also created a massive emotional drought -** we weren't made to empathize with each other through screens. As video conferencing turns into the new normal, marketers and managers continue to struggle with remote communication's lack of nuance and engagement, and those with sensory impairments likely have it even worse.
+As AI and the web turns into the normal, kids will continue to be exposed. Those with sensory impairments and lack of knowledge of web searching could make a barrier for children to learn about the planet around them. Not to mention, Our goal was to build something usable in the developing world, giving them access to critical environmental and nutrition information, and push for better food practices. To do this, we used SMS, as internet access is limited in developing countries, yet there is high mobile penetration in such countries. It would be possible to communicate with Meebo and retrieve set information on common environmental practices and expiration dates. 
 
-Given our team's experience with AI/ML, we wanted to leverage data to bridge this gap. Beginning with the idea to use computer vision to help sensory impaired users detect emotion, we generalized our use-case to emotional analytics and real-time emotion identification for video conferencing in general.
+We wanted to leverage AI and a polished interface to bridge the gap from information to children. Beginning with the idea of an animal companion, our group decided to use AI and messaging to be able to reach out and spread good environmental practices. 
 
 ## ⚙️ What it does ⚙️
 
-
+Meebo is an app designed to teach children about environmental practices and nutrition information in developing countries with limited internet access. It uses AI and messaging to reach out to children and promote good environmental practices by providing information on common environmental practices and expiration dates via SMS or Web. The app has a polished interface that catches the attention of younger audiences and relies on React.js and MobX for state management, with React Styled Components for styling. The backend uses Prisma.io to quickly build out the database tables needed for the users' information and pets, with REST API routes in Next.js to query and mutate data. The team faced challenges in scoping the app and coordinating with the Divinci AI API. However, they successfully learned and became proficient in a branch-rebase workflow, React Styled Components, and server-side rendering. In the future, the team plans to incorporate Twilio Sendgrid API for SMS and speech transcription and google maps. We also think it would be better to have it as a mobile app for future expansion.
 
 ## 🏗️ How we built it 🏗️
 
+We began by drafting the screens that make up the core user-facing flows. These were then brought into Figma so that we could have a really slick design to catch the attention of a younger audience but also one that anyone could appreciate. 
 
+We then set up a quick create next-app and make a Next.js project. The project was paired with a SQlite database. On the backend, we used Prisma.io to quickly build out the database tables from a database schema that we would need for the users information and pets. We then created REST API routes in Next.js to query and mutate data.
 
-### ⚫ Data, ML, and Visualizations ⚫
+The frontend relies primarily on React.js, with MobX for state management. Styling was done using React Styled Components. We found React Styled Components to be a great way of having standard css and being able to quickly and neatly export anything we wanted as a component. In addition, we took care in making the frontend extremely performant by strategically using MobX reactivity and server-side rendering.
 
+For the AI and retrieving information, we used Divinci API from OpenAI by sending queries and parsing them based on what the user would be asking for. We were working on implementing Twilio SendGrid API with being able to connect to a set pet from SMS and they would be able to answer popular questions on food expiration information and food safety practices. 
 
+In the future, it is simple to replace the database with any hosted SQL server, and add speech to text so that younger children don't have to type.
 
 ## 🚩 Challenges we ran into
 
-The primary challenge came in the form of properly scoping the app. And to this end, we believe we were extremely successful. One unexpected time sink we hit involved getting videos from the frontend onto the server’s file system. Next.js’s API routes didn’t seem to support multipart file uploads, so we had to Google around until we found a library called “formidable” to do it. Coordinating with AssemblyAI’s API was also tricky because they require us to poll an endpoint once a video is submitted to determine when the transcription is completed. We first tried to stall the server request until the transcription was ready, but Next.js’s development server is single-threaded and gave us trouble. We found a good solution in the end: we created a separate API endpoint that makes a single roundtrip to AssemblyAI to check status; and we called this API from the frontend at 2s intervals. This way, we don’t stall our server.
+This was the first time that most of the people in the group really tried to code a project from scratch to a polished product, so there was a lot of set up to do at the beginning. We had to make sure that we had a good configuration and learned how to popular do branch-rebase workflow. Additionally, we were unfamiliar with TypeScript and it was a great learning opportunity for us to be able to also work with next.js at the same time. We spent a lot of time looking at what libraries and technologies that would be best to build our app. Server-side rendering was also a focus of our project so that we could have the best performance and it was challenging at times
+
+Not to mention, we spent a lot of time in properly scoping the app. We had to spend a lot of time in Figma as a team and then we worked on getting a really polished and interactive frontend that could also communicate with our backend. Our backend was sourced locally before we could deploy it and that was a challenge that we found. We also found a challenge with userAuth. Additionally, it was very difficult to coordinate with Divinci AI because of how we wanted to sculpt our prompts for the different scenarios. We also had to be careful to not stall our server when waiting for the API response.
 
 ## 🥇 Accomplishments that we're proud of
 
-We are extremely proud of how polished our app is - we can’t wait to demo it! Despite having a very limited time, we took care of details that enhances the user experience: the frontend design and color scheme is clear and consistent throughout all the screens, and we fully implemented every feature and user flow we set out to do (with the exception of sending emails/texts). We set out to create an app that’s extremely accessible and easy to use, and we hit our mark. We are also proud that we managed to include AI enhancement through AssemblyAI without creating any rough corners in the user experience.
+We are really proud of how polished and visually appealing we were able to make our app in this short time, especially with little experience. We got a full working demo that is able to get the functionality that we wanted across. Despite having a very limited time, we took care of details that enhances the user experience: the frontend design and color scheme is clear and consistent. We fully implemented every main future and were in the processing of incorporating additional ones like Twilio Sendgrid API for SMS and also speech transcription and google maps. We set out to create an app that’s extremely accessible and easy to use, and we hit our mark. 
+
+We are so proud of what we were able to learn and feel like a different coder from the start to now. 
 
 ## 📚 What we learned
 
-We learned the value of planning before coding. We came in with the belief that an extra few hours of pen-on-paper planning can save many precious hours of coding time. This hypothesis proved to be extremely true: by scoping everything out clearly, we faced minimal hiccups when actually coding.
+We are so proud that we became fully efficient at a branch-rebase workflow and were able to successfully make work together on project. The set up was hard but we are all proud of how we were able to get the ball rolling and love working on it. A lot of our team got to learn the Next.js Framework and React library. It was fun to be able to experiment with new technologies.
 
-This was also everyone’s first time using Figma. By the end, we mastered an incredibly useful UX design tool. Additionally, this was Dale and Alex K’s first time using TypeScript. The benefits of type safety as we pushed to go fast paid off in the end.
-
-Finally, we learned the value of collaboration and being aligned on what we were building. The three of us came into the hackathon with differing opinions on what to build, but on the first day, we had very productive brainstorming sessions that led us to MemCapsules idea.
+We become proficient in React Styled Components and gained a lot of insight into server-side rendering. There is still a lot we need to learn but we are overall happy with how far we have came. 
 
 ## ⏳ What's next for Meebo?
 
-A handful of tasks will enable us to deploy MemCapsules at scale. These tasks include switching a properly hosted SQL database and blob storage, and completing the Twilio integration for sending messages. MemCapsules’ data model is well thought out and engineered in a way that scales. We will also need to do more research into which target demographic to pursue, and then market our product to them. Overall, there is great potential potential here overhaul how we memorialize our loved ones.
+A handful of tasks will enable us to deploy Meebo at scale and bridge the gap for all communities. 
+
+We want to port our app to flutter so that it can be more accessible to children that might be using their parent's phone, and it would also be more fun for the kids to be talking to a phone over a computer
+
+We want to complete our use of speech-text transcription using Google's api so that younger tolders that don't know how to type are able to interact with. We need to scale up our database. We also need to fix the Twilio SendGrind API code. 
 
 ## Contributions
 
