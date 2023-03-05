@@ -43,9 +43,9 @@ export default function Home() {
 
           <div>
             <label>
-              {/* <InputButton>Password:</InputButton> */}
               <CenteringDiv>
                 <Form.Control
+                  type="Password"
                   name="Password"
                   placeholder="Password"
                   className={styles.inputForm}

@@ -12,9 +12,9 @@ export const InputButton = styled.div`
 
 export const TextArea = styled.input`
   text-align: center;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  padding: 9px;
+  margin-top: 0.7vw;
+  margin-bottom: 0.7vw;
+  padding: 0.65vw;
   border: black;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -47,19 +47,20 @@ export const CenteringDiv = styled.div`
 export const CenteringSection = styled.div`
   display: flex;
   position: absolute;
-  margin-left: 27%;
-  transform: translate(0, 20%);
+  left: 50vw;
+  top: 50vh;
+  transform: translate(-50%, -50%);
   padding: 10px;
   justify-content: center;
 `;
 
 export const WhiteSpace = styled.div`
-  padding: 40px;
+  padding: 2.77vw;
 `;
 
 export const HomeScreen = styled.div`
   background: linear-gradient(106.07deg, #a9dcc5 8.55%, #60a888 93.3%);
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   overflow-x: hidden;
   align-items: center;
