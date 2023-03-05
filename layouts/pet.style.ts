@@ -14,6 +14,13 @@ export const PetContainer = styled.div`
   display: flex;
   flex-direction: column;
 `;
+
+//
+export const PetContainer2 = styled.div`
+  overflow: hidden;
+  width: 100%;
+  margin: 0 auto;
+`;
 export const PetContainers = styled.div`
   overflow: hidden;
   width: 30%;

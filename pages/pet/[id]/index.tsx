@@ -5,7 +5,7 @@ import App from "../../../components/App";
 import {
   BootLegBody,
   IntroBubble,
-  PetContainer,
+  PetContainer2,
   PetNameBubble,
   QuestionText,
   ResponseText,
@@ -26,11 +26,11 @@ const PetPage = ({ data, pageName }) => {
     <div>
       <BootLegBody>
         <PetNameBubble>
-          <QuestionText>{pageName}</QuestionText>
+          <QuestionText>{data.name}</QuestionText>
         </PetNameBubble>
-        <PetContainer>
+        <PetContainer2>
           <IntroBubble>
-            <ResponseText>Hey I'm Meebo, Ask me anything!</ResponseText>
+            <ResponseText>Hey I'm {data.name}, Ask me anything!</ResponseText>
           </IntroBubble>
           <div>
             <motion.img
@@ -56,12 +56,14 @@ const PetPage = ({ data, pageName }) => {
               }}
               animate={{
                 y: (headWobble =
-                  amplitude * headWobble * Math.sin(frequency * counter++)),
+                  amplitude *
+                  headWobble *
+                  Math.sin(frequency * 10 * counter++)),
               }}
             />
           </div>
           <App />
-        </PetContainer>
+        </PetContainer2>
       </BootLegBody>
     </div>
   );
