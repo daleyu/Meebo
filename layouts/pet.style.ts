@@ -2,8 +2,11 @@ import styled from "styled-components";
 
 //make a new styled component called PetContainer that wraps image in circle
 export const PetContainer = styled.div`
-  overflow: hidden;
-  width: 100%;
+  position: fixed;
+  overflow: visible;
+  width: 28%;
+  left: 50%;
+  transform: translateX(-50%);
   margin: 0 auto;
   margin-top: 12vw;
   margin-bottom: 20px;
@@ -36,8 +39,7 @@ export const BootLegBody = styled.div`
   background: linear-gradient(106.07deg, #a9dcc5 8.55%, #60a888 93.3%);
   width: 100%;
   height: 100vh;
-  overflow-x: hidden;
-  overflow-y: hidden;
+  overflow: hidden;
 `;
 
 export const GearL = styled.div`
@@ -63,8 +65,9 @@ export const Description = styled.div`
   left: 0vw;
   overflow: hidden;
   font-size: 1.5vw;
-  font-family: heebo;
+  font-family: Heebo;
   text-align: center;
+  color: #ffffff;
 `;
 
 //create petname bubble
