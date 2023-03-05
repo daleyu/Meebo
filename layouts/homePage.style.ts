@@ -106,3 +106,39 @@ export const QueryArea = styled.textarea`
   -moz-box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 8px;
   -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 8px;
 `;
+
+//button with type="submit" and nice and round
+export const ChatButton = styled.button`
+  text-align: center;
+  margin: 20px;
+  padding: 0.65vw;
+  border: black;
+  border-radius: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+`;
+
+//chat bubble for animal talking
+export const ChatBubble = styled.div`
+  position: absolute;
+  left: 50vw;
+  top: 20vh;
+  text-align: center;
+  margin: 20px;
+  padding: 0.65vw;
+  border: black;
+  border-radius: 80px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #ffffff;
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left 25,
+    from(#ffffff),
+    color-stop(4%, #eeeeee),
+    to(#eeeeee)
+  );
+  width: 600px;
+  height: 300px;
+`;
